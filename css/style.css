@@ -1251,6 +1251,9 @@ html, body {
   .footer .soces {
     width: 45%;
   }
+  .header {
+    width: 98%;
+  }
 }
 @media (max-width: 380px) {
   .page11_item {

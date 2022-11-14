@@ -1145,6 +1145,9 @@ html, body {
    .footer .soces {
       width: 45%;
    }
+   .header {
+      width: (100% - 2%);
+   }
 }
 
 @media(max-width: 380px) {
