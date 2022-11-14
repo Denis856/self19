@@ -748,6 +748,9 @@ html, body {
    padding: 40px 0;
    font-size: 20px;
    color: #fff;
+   .soces {
+      display: none;
+   }
 }
 
 // media start
@@ -963,9 +966,17 @@ html, body {
    }
    .menu2 {
       display: block;
-      left: -30px;
+      left: -34px;
    }
    .header .soces {
+      display: none;
+   }
+   .footer p {
+      margin: 0 0 20px 0;
+   }
+   .footer .soces {
+      display: block;
+      width: 35%;
       margin: 0 auto;
    }
    .logo {
@@ -993,9 +1004,12 @@ html, body {
       width: 45px;
       height: 45px;
    }
-   .header .soces a img {
-      height: 18px;
-      width: 18px;
+   .footer .soces a img {
+      height: 30px;
+      width: 30px;
+   }
+   .footer .soces a:not(:last-child) {
+      margin: 0 30px 0 0;
    }
    .page11_item {
       width: 80%;
@@ -1070,6 +1084,9 @@ html, body {
    .contact .form {
       padding: 35px 0 30px 0;
    }
+   .footer .soces {
+      width: 40%;
+   }
 }
 
 @media(max-width: 450px){
@@ -1124,6 +1141,12 @@ html, body {
    }
 }
 
+@media(max-width: 410px){
+   .footer .soces {
+      width: 45%;
+   }
+}
+
 @media(max-width: 380px) {
    .page11_item {
       width: 70%;
@@ -1146,6 +1169,21 @@ html, body {
       padding: 0 30px 30px 30px;
       font-size: 20px;
       line-height: 30px;
+   }
+   .footer .soces {
+      width: 53%;
+   }
+   .footer .soces a:not(:last-child) {
+      margin: 0 20px 0 0;
+   }
+   .menu2 {
+      left: -45px;
+   }
+}
+
+@media(max-width: 350px) {
+   .menu2 {
+      left: -50px;
    }
 }
 
