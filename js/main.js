@@ -31,6 +31,15 @@ var button8 = document.querySelector('.button8');
 var text19 = document.querySelector('.text19');
 var button9 = document.querySelector('.button9');
 var page11_item = document.querySelectorAll('.page11_item');
+var img13 = document.getElementById('img13');
+var img110 = document.getElementById('img11');
+var img120 = document.getElementById('img12');
+var img130 = document.getElementById('img130');
+var img14 = document.getElementById('img14');
+var img15 = document.getElementById('img15');
+var img16 = document.getElementById('img16');
+var img17 = document.getElementById('img17');
+var img18 = document.getElementById('img18');
 
 
 // script header
@@ -64,6 +73,7 @@ function menu() {
 
 
 function show1() {
+   img110.classList.toggle('img_auto');
    item1.classList.toggle('page11_item0');
 
    item1.classList.toggle('bg_no');
@@ -92,6 +102,7 @@ function show1() {
 }
 
 function show2() {
+   img120.classList.toggle('img_auto');
    item2.classList.toggle('bg_no');
 
    item2.classList.toggle('page11_item0');
@@ -120,6 +131,7 @@ function show2() {
 }
 
 function show3() {
+   img130.classList.toggle('img_auto');
    item3.classList.toggle('bg_no');
 
    item3.classList.toggle('page11_item0');
@@ -148,6 +160,7 @@ function show3() {
 }
 
 function show4() {
+   img14.classList.toggle('img_auto');
    item4.classList.toggle('bg_no');
 
    item4.classList.toggle('page11_item0');
@@ -176,6 +189,7 @@ function show4() {
 }
 
 function show5() {
+   img15.classList.toggle('img_auto');
    item5.classList.toggle('bg_no');
 
    item5.classList.toggle('page11_item0');
@@ -204,6 +218,7 @@ function show5() {
 }
 
 function show6() {
+   img16.classList.toggle('img_auto');
    item6.classList.toggle('bg_no');
 
    item6.classList.toggle('page11_item0');
@@ -232,6 +247,7 @@ function show6() {
 }
 
 function show7() {
+   img17.classList.toggle('img_auto');
    item7.classList.toggle('bg_no');
 
    item7.classList.toggle('page11_item0');
@@ -260,6 +276,7 @@ function show7() {
 }
 
 function show8() {
+   img18.classList.toggle('img_auto');
    item8.classList.toggle('bg_no');
 
    item8.classList.toggle('page11_item0');
@@ -288,6 +305,7 @@ function show8() {
 }
 
 function show9() {
+   img13.classList.toggle('img_auto');
    item9.classList.toggle('bg_no');
 
    item9.classList.toggle('page11_item0');
