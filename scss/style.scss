@@ -38,11 +38,13 @@ html, body {
 }
 
 .header {
+   transition: all .3s ease;
    background:scroll;
-   position: absolute;
+   position: fixed;
    top: 0;
    width: 100%;
-   padding: 49px 20px;
+   padding: 0 20px;
+   z-index: 500;
    .menu1 {
       @include center2;
       align-items: center;
@@ -82,6 +84,15 @@ html, body {
    .menu_link {
       color: #fff;
    }
+}
+
+.white {
+   color: #fff;
+}
+
+.left2 {
+   top: -200%;
+   opacity: 0;
 }
 
 .left {
@@ -596,19 +607,148 @@ html, body {
 // contact start
 
 .contact {
+   background: #2E2C2C;
    padding: 47px 0 200px 0;
+   .container {
+      position: relative;
+   }
    .contact_body {
       display: flex;
+      justify-content: space-between;
+      position: relative;
    }
-   .contact_text {
-      flex: 0 1 50%;
+   .text4 {
+      font-weight: 600;
+      font-size: 32px;
+      line-height: 39px;
+      color: #FFFFFF;
+      max-width: 473px;
+   }
+   address {
+      font-weight: 600;
+      font-size: 26px;
+      line-height: 32px;
+      color: #FFFFFF;
+      margin: 0 0 0 11px;
+   }
+   .contact_adress {
+      margin: 77px 0 88px 0;
+      a {
+         display: flex;
+         align-items: center;
+         cursor: pointer;
+      }
+   }
+   .contact_adress>*:not(:last-child) {
+      margin: 0 0 27px 0;
+   }
+   .location {
+      max-width: 70%;
+      position: relative;
+      padding: 0 0 40% 0;
+   }
+   .location iframe {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      object-fit: cover;
    }
    .form {
-      flex: 0 1 50%;
+      width: 45%;
+      background: #B8AFAF;
+      border-radius: 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 68px 0 60px 0;
+   }
+   .input {
+      width: 74.53%;
+      background: #FFFFFF;
+      border-radius: 20px;
+      height: 85px;
+      border: none;
+      font-weight: 600;
+      font-size: 26px;
+      line-height: 32px;
+      color: #928B8B;
+      text-indent: 24px;
+   }
+   .textarea {
+      height: 214px;
+      margin-bottom: 0;
+      padding: 24px 0 0 0;
+   }
+   .textarea:active {
+      line-height: 20;
+   }
+   .input {
+      margin: 0 0 31px 0;
+   }
+   .btn4 {
+      font-size: 26px;
+      line-height: 32px;
+      background: #329B30;
+      border-radius: 20px;
+      text-align: center;
+      color: #fff;
+      border: none;
+      text-align: center;
+      padding: 22px 46px;
+      cursor: pointer;
+      position: relative;
+      transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+      &:hover {
+         top: -3px;
+         box-shadow: 0 5px 5px 0 rgb(19, 84, 27);
+      }
+      &:active {
+         top: 1px;
+         box-shadow: 0 0 0 rgb(19, 84, 27);
+      }
    }
 }
 
+.ryt {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 40px;
+   font-weight: 800;
+   color: rgb(37, 34, 34);
+   background: rgb(82, 163, 71);
+   padding: 20px 10px;
+   position: absolute;
+   bottom: 20%;
+   right: 35%;
+   width: 30%;
+   height: 30%;
+   text-align: center;
+   z-index: 10;
+   opacity: 0;
+   transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+   transform: scale(0.1);
+   border: 1px solid #fff;
+   cursor: pointer;
+}
+
+.back4 {
+   opacity: 1;
+   right: 10%;
+   transform: scale(1);
+}
+
 // contact end
+
+.footer {
+   background: rgb(73, 70, 70);
+   text-align: center;
+   padding: 40px 0;
+   font-size: 20px;
+   color: #fff;
+}
 
 // media start
 
@@ -627,7 +767,7 @@ html, body {
       padding: 10px;
    }
    .header {
-      padding: 40px 0;
+      padding: 10px 0;
       width: 100%;
    }
    .header .soces a img {
@@ -666,11 +806,48 @@ html, body {
    .page2_items .page2_item:not(:last-child) {
       margin: 0 10px 40px 0;
    }
+   .contact .input {
+      width: 90%;
+   }
 }
 
 @media(max-width: 1099.98px) {
    .page3_items {
       justify-content: space-around;
+   }
+   .contact .contact_body {
+      flex-direction: column;
+      align-items: center;
+   }
+   .contact .text4 {
+      font-weight: 600;
+      font-size: 32px;
+      text-align: center;
+   }
+   .contact_adress {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      padding: 0 0 0 25%;
+   }
+   .contact .location {
+      max-width: 100%;
+      padding: 0 0 50% 0;
+   }
+   .location {
+      margin: 0 auto;
+   }
+   .contact_text {
+      padding: 0 0 130px 0;
+   }
+   .contact .form {
+      width: 60%;
+   }
+   .ryt {
+      bottom: 14%;
+      right: 24%;
+      width: 50%;
+      height: 15%;
    }
 }
 
@@ -711,6 +888,9 @@ html, body {
    }
    .page2_items .page2_item:not(:last-child) {
       margin: 0 0 40px 0;
+   }
+   .contact .form {
+      width: 70%;
    }
 }
 
@@ -772,6 +952,9 @@ html, body {
          line-height: 80px;
          margin: 0 0 200px 0;
    }
+   .contact .form {
+      width: 80%;
+   }
 }
 
 @media(max-width: 700px) {
@@ -817,6 +1000,55 @@ html, body {
    .page11_item {
       width: 80%;
    }
+   .ryt {
+      top: 70%;
+      right: 18%;
+      width: 60%;
+   }
+   .contact .form {
+      width: 90%;
+   }
+   .contact .contact_adress {
+      margin: 50px 0 70px 0;
+   }
+   .contact .text4 {
+      font-size: 25px;
+      line-height: 30px;
+      width: 80%;
+      margin: 0 auto;
+   }
+   .contact address {
+      font-size: 20px;
+      line-height: 25px;
+      margin: 0 0 0 11px;
+   }
+   .contact .contact_adress > *:not(:last-child) {
+      margin: 0 0 15px 0;
+   }
+   .contact .input {
+      height: 60px;
+      font-size: 20px;
+      line-height: 25px;
+      text-indent: 15px;
+   }
+   .contact .textarea {
+      height: 180px;
+      padding: 15px 0 0 0;
+   }
+   .contact .input {
+      margin: 0 0 20px 0;
+   }
+   .contact .btn4 {
+      font-size: 20px;
+      line-height: 25px;
+      padding: 15px 30px;
+   }
+}
+
+@media(max-width: 600px) {
+   .contact .form {
+      width: 100%;
+   }
 }
 
 @media(max-width: 500px) {
@@ -827,6 +1059,16 @@ html, body {
    .title {
       font-size: 50px;
       line-height: 60px;
+   }
+   .contact .text4 {
+      width: 100%;
+   }
+   .ryt {
+      top: 71%;
+      right: 18%;
+   }
+   .contact .form {
+      padding: 35px 0 30px 0;
    }
 }
 
@@ -875,6 +1117,10 @@ html, body {
       padding: 0 30px 30px 30px;
       font-size: 20px;
       line-height: 35px;
+   }
+   .ryt {
+      width: 90%;
+      right: 2.5%;
    }
 }
 

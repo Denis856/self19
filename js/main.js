@@ -29,6 +29,7 @@ var button7 = document.querySelector('.button7');
 var text18 = document.querySelector('.text18');
 var button8 = document.querySelector('.button8');
 var text19 = document.querySelector('.text19');
+var main = document.querySelector('.main');
 var button9 = document.querySelector('.button9');
 var page11_item = document.querySelectorAll('.page11_item');
 var img13 = document.getElementById('img13');
@@ -40,6 +41,7 @@ var img15 = document.getElementById('img15');
 var img16 = document.getElementById('img16');
 var img17 = document.getElementById('img17');
 var img18 = document.getElementById('img18');
+var page11 = document.querySelector('.page11');
 
 
 // script header
@@ -68,6 +70,20 @@ soc.forEach(element=> {
 function menu() {
    menu21.classList.toggle('left');
 }
+
+$(".main").click(function(){
+   $(".menu21").removeClass('left');
+});
+
+
+$(function(){
+   $('a[href^="#"]').click(function(){
+   var target = $(this).attr('href');
+   $('html, body').animate({scrollTop: $(target).offset().top}, 800);//800 - длительность скроллинга в мс
+   return false;
+   });
+   });
+
 
 // script page11
 
@@ -338,3 +354,29 @@ var figure = document.querySelector('.figure');
 function back() {
    figure.classList.toggle('back');
 }
+
+// script contact
+
+var ryt = document.querySelector('.ryt');
+
+function back4() {
+   ryt.classList.toggle('back4');
+}
+
+var menu_link2 = document.querySelector('.menu_link2');
+var page11 = document.getElementById('page11');
+
+
+
+   function consoleBG() {
+      if ($(window).scrollTop() == 0) {
+        $('.header').css('background', 'none');
+      } else {
+        $('.header').css('background', 'rgba(225, 220, 220, 0.801)');
+      }
+    }
+    consoleBG();
+    
+    $(window).scroll(function() {
+      consoleBG();
+    });
