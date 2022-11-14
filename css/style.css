@@ -21,13 +21,8 @@ html, body {
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 600;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  width: 100%;
+  overflow: hidden;
 }
 
 .main {
@@ -861,7 +856,6 @@ html, body {
   }
   .header {
     padding: 10px 0;
-    width: 100%;
   }
   .header .soces a img {
     height: 40px;
@@ -1250,9 +1244,6 @@ html, body {
 @media (max-width: 410px) {
   .footer .soces {
     width: 45%;
-  }
-  .header {
-    width: 98%;
   }
 }
 @media (max-width: 380px) {
