@@ -67,17 +67,16 @@ soc.forEach(element=> {
 
 // script menu
 
-function menu() {
-   menu21.classList.toggle('left');
-}
 
 $(".main").click(function(){
    $(".menu21").removeClass('left');
+   $(".menu2").removeClass('active');
 });
 
 $(document).ready(function(){
    $(".menu2").click(function(){
       $(".menu2").toggleClass('active');
+      $(".menu21").toggleClass('left');
    });
 });
 
