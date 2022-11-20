@@ -158,45 +158,42 @@ html, body {
    position: relative;
    cursor: pointer;
    z-index: 100;
-}
-
-.menu2:before,
-.menu2 span,
-.menu2:after {
-   content: '';
-   position: absolute;
-   width: 30px;
-   height: 3px;
-   top: 0;
-   left: 95%;
-   background: #000;
-   transition: all .3s ease;
-}
-
-.menu2:before {
-   top: 8px;
-}
-
-.menu2 span {
-   top: 0px;
-}
-
-.menu2:after {
-   top: -8px;
-}
-
-.menu2:active span {
-   transform: scale(0);
-}
-
-.menu2:active:before {
-   transform: rotate(45deg);
-   top: 11px;
-}
-
-.menu2:active:after {
-   transform: rotate(-45deg);
-   bottom: 11px;
+   &.active {
+      &::before {
+         transform: rotate(45deg);
+         top: 11px;
+      }
+   }
+   &.active {
+      & span {
+         opacity: 0;
+         transform: scale(0.1);
+      }
+   }
+   &.active {
+      &:after {
+         transform: rotate(-45deg);
+         bottom: 11px;
+      }
+   }
+   &::before,
+   & span,
+   &::after {
+      content: '';
+      position: absolute;
+      width: 30px;
+      height: 3px;
+      top: 0;
+      left: 95%;
+      background: #000;
+      transition: all .3s ease;
+   }
+   &::before {
+      top: 8px;
+   }
+   &::after {
+      top: -8px;
+   }
 }
 
 

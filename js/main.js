@@ -75,6 +75,12 @@ $(".main").click(function(){
    $(".menu21").removeClass('left');
 });
 
+$(document).ready(function(){
+   $(".menu2").click(function(){
+      $(".menu2").toggleClass('active');
+   });
+});
+
 
 $(function(){
    $('a[href^="#"]').click(function(){

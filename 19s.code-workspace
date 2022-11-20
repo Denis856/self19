@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "..\\18s"
+		},
+		{
+			"path": "..\\..\\HTML\\html1\\р12"
+		},
+		{
+			"path": "..\\13s"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "19s"
+	}
+}
